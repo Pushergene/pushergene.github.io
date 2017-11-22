@@ -6,283 +6,137 @@
 of this license document, but changing it is not allowed.
 
 -->
-
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>Persian News</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-red.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <body>
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
 <style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+    background-image: url('https://images7.alphacoders.com/542/542732.jpg');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.columns {
+    float: left;
+    width: 200px;
+    padding: 8px;
+}
+
+.price {
+    list-style-type: none;
+    border: 0px solid #eee;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
 
 
+.price .header {
+    background-color: #111;
+    color: white;
+    font-size: 25px;
+}
+
+.price li {
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    text-align: center;
+}
 
 
-  .container-fluid {
-      padding: 60px 50px;
-  }
-  .bg-grey {
-      background-color: #f6f6f6;
-  }
-  .logo-small {
-      color: #f4511e;
-      font-size: 50px;
-  }
-  .logo {
-      color: #f4511e;
-      font-size: 200px;
-  }
-  .thumbnail {
-      padding: 0 0 15px 0;
-      border: none;
-      border-radius: 0;
-  }
-  .thumbnail img {
-      width: 100%;
-      height: 100%;
-      margin-bottom: 10px;
-  }
-  .carousel-control.right, .carousel-control.left {
-      background-image: none;
-      color: #f4511e;
-  }
-  .carousel-indicators li {
-      border-color: #f4511e;
-  }
-  .carousel-indicators li.active {
-      background-color: #f4511e;
-  }
-  .item h4 {
-      font-size: 19px;
-      line-height: 1.375em;
-      font-weight: 400;
-      font-style: italic;
-      margin: 70px 0;
-  }
-  .item span {
-      font-style: normal;
-  }
-  .panel {
-      border: 1px solid red; 
-      border-radius:0 !important;
-      transition: box-shadow 0.5s;
-  }
-  .panel:hover {
-      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
-  }
+.price .grey {
+    background-color: #eee;
+    font-size: 20px;
+}
 
-  .panel-heading {
-      color: white !important;
-      background-color: #df4620 !important;
-      padding: 25px;
-      border-bottom: 1px solid transparent;
-      border-top-left-radius: 0px;
-      border-top-right-radius: 0px;
-      border-bottom-left-radius: 0px;
-      border-bottom-right-radius: 0px;
-  }
 
-  .panel-footer h3 {
-      font-size: 32px;
-  }
-  .panel-footer h4 {
-      color: #aaa;
-      font-size: 14px;
-  }
-  .panel-footer .btn {
-      margin: 15px 0;
-      background-color: #f4511e;
-      color: #fff;
-  }
-  .navbar {
-      margin-bottom: 0;
-      background-color: #f4511e;
-      z-index: 9999;
-      border: 0;
-      font-size: 12px !important;
-      line-height: 1.42857143 !important;
-      letter-spacing: 4px;
-      border-radius: 0;
-      font-family: Montserrat, sans-serif;
-  }
-  .navbar li a, .navbar .navbar-brand {
-      color: #fff !important;
-  }
-  .navbar-nav li a:hover, .navbar-nav li.active a {
-      color: #f4511e !important;
-      background-color: #fff !important;
-  }
-  .navbar-default .navbar-toggle {
-      border-color: transparent;
-      color: #fff !important;
-  }
-  footer .glyphicon {
-      font-size: 20px;
-      margin-bottom: 20px;
-      color: #f4511e;
-  }
-  .slideanim {visibility:hidden;}
-  .slide {
-      animation-name: slide;
-      -webkit-animation-name: slide;
-      animation-duration: 1s;
-      -webkit-animation-duration: 1s;
-      visibility: visible;
-  }
-  @keyframes slide {
-    0% {
-      opacity: 0;
-      transform: translateY(70%);
-    } 
-    100% {
-      opacity: 1;
-      transform: translateY(0%);
-    }
-  }
-  @-webkit-keyframes slide {
-    0% {
-      opacity: 0;
-      -webkit-transform: translateY(70%);
-    } 
-    100% {
-      opacity: 1;
-      -webkit-transform: translateY(0%);
-    }
-  }
-  @media screen and (max-width: 768px) {
-    .col-sm-4 {
-      text-align: center;
-      margin: 25px 0;
-    }
-    .btn-lg {
-        width: 100%;
-        margin-bottom: 35px;
-    }
-  }
-  @media screen and (max-width: 480px) {
-    .logo {
-        font-size: 150px;
-    }
-  }
-  </style>
-<!-- Header -->
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+</style>
+
 <header class="w3-container w3-theme w3-padding" id="myHeader">
-
 <div class="w3-center">
-<h4>PERSIAN NEWS, LIVE</h4>
-<h1 class="w3-xxxlarge w3-animate-bottom">GLWIZ ALTERNATIVE</h1>
-<div class="w3-padding-32">
+  <h1 class="w3-xxxlarge w3-animate-bottom" style="font-weight:700;">Persian News</h1>
+<div class="w3-padding-16">
 
-</div>
+    </div>
 </header>
 
-
-<!-- BBC -->
-<div class="w3-row-padding w3-margin-top">
-<div class="col-sm-3 col-xs-12">
-<div class="panel panel-default text-center">
-<div class="panel-heading">
-<h3>BBC</h3><br>
-</div>
-  
-<div class="panel-body">
-<a href="https://pushergene.github.io/bbc.html" class="w3-button w3-red w3-round-xxlarge">BBC</a>
-</div>
-</div>
+<div class="w3-row-padding">
+<div class="price">
+<div class="columns">
+    <li class="header">BBC</li>
+    <li class="grey"><a href="https://pushergene.github.io/bbc.html" class="button">BBC</a></li>
+  </ul>
 </div>
 
-<!-- GEM TV -->
-<div class="col-sm-3 col-xs-12">
-<div class="panel panel-default text-center">
-<div class="panel-heading">
-<h3>GEM TV</h3><br>
-</div>
-     
-<div class="panel-body">
-<i class="fa fa- w3-margin-bottom w3-text-theme" style="font-size:40px"></i>
-<a href="http://www.giniko.com/watch.php?id=353" class="w3-button w3-red w3-round-xxlarge">GEM</a>
-</div>
-</div>
+<div class="price">
+<div class="columns">
+    <li class="header">GEM TV</li>
+    <li class="grey"><a href="http://www.giniko.com/watch.php?id=353" class="button">GEM TV</a></li>
+  </ul>
 </div>
 
-<!-- VOA -->
-<div class="col-sm-3 col-xs-12">
-<div class="panel panel-default w3-center">
-<div class="panel-heading">
-<h3>VOA</h3><br>
-</div>    
-<div class="panel-body">
-<i class="fa fa- w3-margin-bottom w3-text-theme" style="font-size:40px"></i>
-<a href="https://ir.voanews.com/embed/player/1/86.html?type=video" class="w3-button w3-red w3-round-xxlarge">VOA</a>
+<div class="price">
+<div class="columns">
+    <li class="header">VOA</li>
+    <li class="grey"><a href="https://ir.voanews.com/embed/player/1/86.html?type=video" class="button">VOA</a></li>
+  </ul>
 </div>
-</div>
-</div>
-<!-- Euronews -->
-<div class="col-sm-3 col-xs-12">
-<div class="panel panel-default w3-center">
-<div class="panel-heading">
-<h3>Euronews</h3><br>
-</div>
-<div class="panel-body">
-<i class="fa fa- w3-margin-bottom w3-text-theme" style="font-size:40px"></i>
-<a href="http://fa.euronews.com/live" class="w3-button w3-red w3-round-xxlarge">Euronews</a>
-</div>
-</div>
-</div>
-<!-- Tip Tapesh -->
-<div class="col-sm-3 col-xs-12">
-<div class="panel panel-default w3-center">
-<div class="panel-heading">    
-<h3>Ti Tapesh</h3><br>
-</div>
-<div class="panel-body">
-<i class="fa fa- w3-margin-bottom w3-text-theme" style="font-size:40px"></i>
-<a href="http://oklivetv.com/ti-tapesh-tv-live/" class="w3-button w3-red w3-round-xxlarge">Ti TAPESH</a>
-</div>
-</div>
-</div>
-<!-- Channel one -->
-<div class="col-sm-3 col-xs-12">
-<div class="panel panel-default w3-center">
-<div class="panel-heading"> 
-<h3>Channel One</h3><br>
-</div>
-<div class="panel-body">
-<i class="fa fa- w3-margin-bottom w3-text-theme" style="font-size:40px"></i>
-<a href="http://ch1.cc/live-tv/" class="w3-button w3-red w3-round-xxlarge">Channel one</a>
-</div>
-</div>
-</div>
- <!-- Gem Life -->
-<div class="col-sm-3">
-<div class="panel panel-default text-center">
-<div class="panel-heading">
-<h3>Gem Life</h3><br>
-</div>
-<div class="panel-body">
-<i class="fa fa- w3-margin-bottom w3-text-theme" style="font-size:40px"></i>
-<a href="http://www.giniko.com/watch.php?id=361" class="w3-button w3-red w3-round-xxlarge">Gem Life </a>
-</div>
-</div>
-</div>  
 
-<!-- Gem River Live -->
-<div class="col-sm-3 col-xs-12">
-<div class="panel panel-default text-center">
-<div class="panel-heading">
-<h3>GemRiver</h3><br>
+<div class="price">
+<div class="columns">
+    <li class="header">Euronews</li>
+    <li class="grey"><a href="http://fa.euronews.com/live" class="button">Euronews</a></li>
+  </ul>
 </div>
-<div class="panel-body">
-<i class="fa fa- w3-margin-bottom w3-text-theme" style="font-size:40px"></i>
-<a href="http://www.parsatv.com/name=GEM-River" class="w3-button w3-red w3-round-xxlarge">GemRiver </a>
+
+<div class="price">
+<div class="columns">
+    <li class="header">TAPESH</li>
+    <li class="grey"><a href="http://oklivetv.com/ti-tapesh-tv-live/" class="button">TAPESH</a></li>
+  </ul>
 </div>
+
+<div class="price">
+<div class="columns">
+    <li class="header">CHANNEL 1</li>
+    <li class="grey"><a href="http://ch1.cc/live-tv/" class="button">CH 1</a></li>
+  </ul>
 </div>
+
+<div class="price">
+<div class="columns">
+    <li class="header">GEM LIFE</li>
+    <li class="grey"><a href="http://www.giniko.com/watch.php?id=361" class="button">GEM LIFE</a></li>
+  </ul>
+</div>
+
+<div class="price">
+<div class="columns">
+    <li class="header">GEM RIVER</li>
+    <li class="grey"><a href="http://www.parsatv.com/name=GEM-River" class="button">River</a></li>
+  </ul>
 </div>
 
 </body>
